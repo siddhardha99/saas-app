@@ -101,10 +101,10 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                     <div className="companion-avatar" style={{ backgroundColor: getSubjectColor(subject)}}>
                         <div
                             className={
-                            cn(
-                                'absolute transition-opacity duration-1000', callStatus === CallStatus.FINISHED || callStatus === CallStatus.INACTIVE ? 'opacity-1001' : 'opacity-0', callStatus === CallStatus.CONNECTING && 'opacity-100 animate-pulse'
-                            )
-                        }>
+                                cn(
+                                    'absolute transition-opacity duration-1000', callStatus === CallStatus.FINISHED || callStatus === CallStatus.INACTIVE ? 'opacity-1001' : 'opacity-0', callStatus === CallStatus.CONNECTING && 'opacity-100 animate-pulse'
+                                )
+                            }>
                             <Image src={`/icons/${subject}.svg`} alt={subject} width={150} height={150} className="max-sm:w-fit" />
                         </div>
 
@@ -135,10 +135,10 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                     </button>
                     <button className={cn('rounded-lg py-2 cursor-pointer transition-colors w-full text-white', callStatus ===CallStatus.ACTIVE ? 'bg-red-700' : 'bg-primary', callStatus === CallStatus.CONNECTING && 'animate-pulse')} onClick={callStatus === CallStatus.ACTIVE ? handleDisconnect : handleCall}>
                         {callStatus === CallStatus.ACTIVE
-                        ? "End Session"
-                        : callStatus === CallStatus.CONNECTING
-                            ? 'Connecting'
-                        : 'Start Session'
+                            ? "End Session"
+                            : callStatus === CallStatus.CONNECTING
+                                ? 'Connecting'
+                                : 'Start Session'
                         }
                     </button>
                 </div>
@@ -158,7 +158,7 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                                 </p>
                             )
                         } else {
-                           return <p key={index} className="text-primary max-sm:text-sm">
+                            return <p key={index} className="text-primary max-sm:text-sm">
                                 {userName}: {message.content}
                             </p>
                         }
