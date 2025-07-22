@@ -211,7 +211,7 @@ const Page = async () => {
 
                 {/* CTA Section */}
                 <section className="cta-section mx-auto">
-                    <div className="cta-badge">Ready to Start Learning?</div>
+                    <div className="cta-badge">Ready to Start Learning ?</div>
                     <h2 className="text-3xl font-bold mb-4">Get Started Today</h2>
                     <p className="text-lg mb-6">Sign in to create your first AI companion and begin interactive voice tutoring sessions</p>
                     <Link href="/sign-in">
